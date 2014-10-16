@@ -3,13 +3,16 @@
     <link href='../css/application.css' rel='stylesheet' type='text/css'>
     <script src='../js/min/jquery.min.js'></script>
     <script src='../js/min/jquery.arctext.min.js'></script>
-    <script src='../js/min/smoke.min.js'></script>
+    <script src='../js/min/scrollSmoke.min.js'></script>
   </head>
   <body>
     <div class='unitus' id='unitus--blog'>
       <div class='unitus__sidebar sidebar'></div>
       <div class='unitus__blog blog'>
         <div class='blog__top'>
+          <div class='top__header'>
+            ヘッダーだよ
+          </div>
           <div class='top__smoke'></div>
           <div class='top__content'>
             <div class='content__table'>
@@ -23,5 +26,8 @@
       </div>
       <div class='clear'></div>
     </div>
+    <script>
+      var smoke = new scrollSmoke({$scrollWatch: $(".blog"), $positionWatch: $(".blog__top"), $header: $(".top__header"), $smoke: $(".top__smoke")})
+    </script>
   </body>
 </html>

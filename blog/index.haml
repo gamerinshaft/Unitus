@@ -3,13 +3,15 @@
     %link{ rel: "stylesheet", type: "text/css", href: "../css/application.css"}
     %script{src: "../js/min/jquery.min.js"}
     %script{src: "../js/min/jquery.arctext.min.js"}
-    %script{src: "../js/min/smoke.min.js"}
+    %script{src: "../js/min/scrollSmoke.min.js"}
 
   %body
     #unitus--blog.unitus
       .unitus__sidebar.sidebar
       .unitus__blog.blog
         .blog__top
+          .top__header
+            ヘッダーだよ
           .top__smoke
           .top__content
             .content__table
@@ -17,4 +19,8 @@
                 ハッカソン大会に参加して
         .blog__content
       .clear
+
+    %script
+      var smoke = new scrollSmoke({$scrollWatch: $(".blog"), $positionWatch: $(".blog__top"), $header: $(".top__header"), $smoke: $(".top__smoke")})
+
 
