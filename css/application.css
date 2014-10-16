@@ -1,5 +1,5 @@
 /* #! scss */
-.blog {
+.unitus__blog {
   box-sizing: border-box;
   float: left;
   position: relative;
@@ -8,7 +8,15 @@
   height: 100%;
 }
 
-.sidebar {
+.blog .blog__top .top__smoke {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+}
+
+.unitus__sidebar {
   box-sizing: border-box;
   position: relative;
   float: left;
@@ -18,7 +26,7 @@
   border-right: 5px solid #30672f;
 }
 
-#unitus--blog .sidebar:before {
+#unitus--blog .unitus__sidebar:before {
   content: "";
   display: block;
   position: absolute;
@@ -33,7 +41,7 @@
   height: 0;
   z-index: 2;
 }
-#unitus--blog .sidebar:after {
+#unitus--blog .unitus__sidebar:after {
   content: "";
   display: block;
   position: absolute;
