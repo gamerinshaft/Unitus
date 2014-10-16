@@ -21,6 +21,24 @@
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+.blog .blog__top .top__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.blog .blog__top .top__content .content__table {
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.blog .blog__top .top__content .content__table .table__title {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+}
 
 .unitus__sidebar {
   box-sizing: border-box;
