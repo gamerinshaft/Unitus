@@ -1,8 +1,40 @@
 /* #! scss */
 .sidebar {
-  width: 50px;
+  position: absolute;
   height: 100%;
-  background-color: red;
+  width: 210px;
+  left: 0;
+  border-right: 5px solid #30672f;
+}
+
+#unitus--blog .sidebar:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -42px;
+  margin-top: -7px;
+  border: 21px solid white;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+#unitus--blog .sidebar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -56px;
+  margin-top: -14px;
+  border: 28px solid #30672f;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  width: 0;
+  height: 0;
 }
 
 body, html {
