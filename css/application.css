@@ -1,3 +1,14 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
 /* #! scss */
 .unitus__blog {
   box-sizing: border-box;
@@ -5,20 +16,23 @@
   position: relative;
   height: 100%;
   width: 85%;
-  background-image: red;
+  overflow: scroll;
+  background-position: center;
+  background-image: url("../img/back.jpg");
+  background-size: cover;
 }
 
 .blog .blog__top {
-  background-size: cover;
+  position: relative;
+  background-color: transparent;
   height: 100%;
-  background-position: center;
-  background-image: url("../img/back.jpg");
+  width: 100%;
 }
 .blog .blog__top .top__smoke {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 .blog .blog__top .top__content {
@@ -37,7 +51,14 @@
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  font-size: 44px;
+  font-family: serif;
   color: white;
+}
+.blog .blog__content {
+  background-color: white;
+  width: 100%;
+  height: 5000px;
 }
 
 .unitus__sidebar {
@@ -47,7 +68,7 @@
   height: 100%;
   width: 15%;
   left: 0;
-  border-right: 5px solid #30672f;
+  border-right: 5px solid #3f68a2;
 }
 
 #unitus--blog .unitus__sidebar:before {
@@ -63,7 +84,7 @@
   border-bottom-color: transparent;
   width: 0;
   height: 0;
-  z-index: 2;
+  z-index: 3;
 }
 #unitus--blog .unitus__sidebar:after {
   content: "";
@@ -72,22 +93,11 @@
   top: 50%;
   right: -56px;
   margin-top: -14px;
-  border: 28px solid #30672f;
+  border: 28px solid #3f68a2;
   border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
   width: 0;
   height: 0;
-  z-index: 1;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.clear {
-  clear: both;
+  z-index: 2;
 }
