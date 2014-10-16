@@ -1,8 +1,19 @@
 /* #! scss */
-.sidebar {
-  position: absolute;
+.blog {
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+  width: 85%;
+  background-color: red;
   height: 100%;
-  width: 210px;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 15%;
   left: 0;
   border-right: 5px solid #30672f;
 }
