@@ -1,0 +1,76 @@
+/* #! scss */
+$official:true;            //Official
+$support-for-webkit:true;  //Chrome, Safari
+$support-for-mozilla:true; //Firefox
+$support-for-ie:true;      //IE
+$support-for-o:true;       //Opera
+// //再生時間
+$default-animation-duration       : 0.5s !default;
+// //実行までの待ち時間
+$default-animation-delay          : 0    !default;
+// //実行回数(number | infinite)
+$default-animation-iteration-count: 1    !default;
+// //タイミング(ease | liner | ease-in | ease-out | ease-in-out | cubic-bezier)
+$default-animation-timing-function: ease !default;
+// //反復の有無(normal | alternate)
+$default-animation-direction: normal     !default;
+// //実行前や実行後のスタイル指定(none | forwards | backwards | both)
+$default-animation-fill-mode: none       !default;
+
+@mixin css3($property, $value...){
+  @if($property == keyframes){
+    @if $support-for-webkit{
+      @-webkit-keyframes $value{
+        @content;
+      }
+    }
+    @if $support-for-mozilla{
+      @-moz-keyframes $value{
+        @content;
+      }
+    }
+    @if $support-for-ie{
+      @-ms-keyframes $value{
+        @content;
+      }
+    }
+    @if $support-for-o{
+      @-o-keyframes $value{
+        @content;
+      }
+    }
+    @keyframes $value{
+      @content;
+    }
+  }@else{
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+       #{$prefix}#{$property}: $value;
+    }
+  }
+}
+
+@mixin gradient($value){
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+      background: #{$prefix}linear-gradient($value);
+    }
+}
+
+@mixin animation (
+  $name     :none,
+  $duration :$default-animation-duration,
+  $delay    :$default-animation-delay,
+  $count    :$default-animation-iteration-count,
+  $function :$default-animation-timing-function,
+  $direction:$default-animation-direction,
+  $fillMode :$default-animation-fill-mode
+){
+   @include css3(animation, $name $duration $function $delay $count $direction);
+}
+
+@mixin keyframes($name) {
+  @include css3(keyframes, $name) {
+        @content;
+  }
+}
+
+
