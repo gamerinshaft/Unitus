@@ -5,13 +5,14 @@
     <meta charset='UTF-8'>
   </head>
   <body>
-    <div class='unitus unitus--top'>
-      <div class='menubar unitus__menubar'>
+    <div class='unitus unitus--top' id='body'>
+      <div class='menubar unitus__menubar' id='menu'>
         <div class='menubar__table'>
           <div class='table__content'>
             Menu
           </div>
         </div>
+        <div class='menubar__sub' id='submenu'></div>
       </div>
       <div class='unitus__first'>
         <div class='first__table'>
@@ -31,5 +32,9 @@
         </div>
       </div>
     </div>
+    <script>
+      $("#menu").on("mouseover", function(e){e.stopPropagation(); console.log("hoge"); $("#submenu").addClass("show");});
+      $("#body").on("mouseover", function(){console.log("out"); $("#submenu").removeClass("show");});
+    </script>
   </body>
 </html>

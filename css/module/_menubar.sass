@@ -19,3 +19,13 @@
       font-family: serif
       color: white
       font-size: 24px
+  .menubar__sub
+    width: 0px
+    height: 100%
+    position: absolute
+    background-color: rgba(0,0,0,0.5)
+    top: 0px
+    left: 200px
+    @include css3(transition, all 0.5s ease-in-out)
+    &.show
+      width: 200px

@@ -4,11 +4,12 @@
     %script{src: "js/min/jquery.min.js"}
     %meta{charset: "UTF-8"}
   %body
-    .unitus.unitus--top
-      .menubar.unitus__menubar
+    .unitus.unitus--top#body
+      .menubar.unitus__menubar#menu
         .menubar__table
           .table__content
             Menu
+        .menubar__sub#submenu
       .unitus__first
         .first__table
           .table__content
@@ -26,3 +27,6 @@
           .logo__main
             Unitus
 
+    %script
+      $("#menu").on("mouseover", function(e){e.stopPropagation(); console.log("hoge"); $("#submenu").addClass("show");});
+      $("#body").on("mouseover", function(){console.log("out"); $("#submenu").removeClass("show");});
