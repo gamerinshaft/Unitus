@@ -64,7 +64,7 @@ $default-animation-fill-mode: none       !default;
   $direction:$default-animation-direction,
   $fillMode :$default-animation-fill-mode
 ){
-   @include css3(animation, $name $duration $function $delay $count $direction);
+   @include css3(animation, $name $duration $function $delay $count $direction $fillMode);
 }
 
 @mixin keyframes($name) {

@@ -1,0 +1,30 @@
+.unitus__top-animate.top-animate
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 100%
+.top-animate
+  img.top-animate__img
+    @include animation(move-back, 8s, 0s, 1, linear, alternate, both)
+    width: 120%
+    height: auto
+    position: absolute
+    right: 0
+    opacity: 0
+  .top-animate__logo
+    @include animation(move-logo, 2s, 8s, 1, linear, alternate, both)
+    margin-top: -20%
+    position: absolute
+    z-index: 2
+    right: 100px
+    top: 30px
+    color: $purple
+    .logo__main
+      font-size: 40px
+      font-weight: bold
+      font-family: cursive, serif
+    .logo__sub
+      font-size: 13px
+      position: relative
+      top: 14px
+      left: 16px
