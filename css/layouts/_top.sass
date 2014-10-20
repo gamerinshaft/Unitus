@@ -16,7 +16,16 @@
         strong
           font-size: 58px
           &.p
-            color: $lightPurple
+            color: transparent
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed8080', endColorstr='#5eb524',GradientType=1 ) /* IE6-9 */
+            @include gradient((left,  #ed8080 0%, #2a77d6 16%, #5eb524 32%, #eacd25 48%, #ed8080 64%, #2a77d6 80%, #5eb524 100%))
+            @include css3(background-size, 300% 300%)
+            @include css3(background-clip, text)
+            @include animation(shimmer, 5s, 0, infinite, ease, alternate, none)
           &.l
-            color: $lightBlue
-
+            color: transparent
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5eb524', endColorstr='#2a77d6',GradientType=1 ) /* IE6-9 */
+            @include gradient((left,  #5eb524 0%, #eacd25 16%, #ed8080 32%, #2a77d6 48%, #5eb524 64%, #ed8080 80%, #2a77d6 100%))
+            @include css3(background-size, 300% 300%)
+            @include css3(background-clip, text)
+            @include animation(shimmer, 5s, 0, infinite, ease, alternate, none)

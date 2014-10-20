@@ -1,0 +1,8 @@
+@include css3(keyframes,shimmer){
+  0%{
+    background-position: top left
+  }
+  100%{
+    background-position: top right
+  }
+}

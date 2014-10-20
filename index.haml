@@ -13,10 +13,10 @@
       .unitus__first
         .first__table
           .table__content
-            %strong.p<>
+            %strong.p.shimmer<>
               想像
             を、
-            %strong.l<>
+            %strong.l.shimmer<>
               創造
             する
       .unitus__top-animate.top-animate
@@ -28,5 +28,5 @@
             Unitus
 
     %script
-      $("#menu").on("mouseover", function(e){e.stopPropagation(); console.log("hoge"); $("#submenu").addClass("show");});
-      $("#body").on("mouseover", function(){console.log("out"); $("#submenu").removeClass("show");});
+      $("#menu").on("mouseover", function(e){e.stopPropagation(); $("#submenu").addClass("show");});
+      $("#body").on("mouseover", function(){$("#submenu").removeClass("show");});
