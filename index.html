@@ -2,29 +2,31 @@
   <head>
     <link href='css/application.css' rel='stylesheet' type='text/css'>
     <script src='js/min/jquery.min.js'></script>
+    <script src='js/min/movePanel.min.js'></script>
+    <script src='js/min/scrollSmoke.min.js'></script>
     <meta charset='UTF-8'>
   </head>
   <body>
     <div class='unitus unitus--top' id='body'>
       <div class='menubar unitus__menubar' id='menu'>
         <div class='menubar__table'>
-          <div class='table__content'>
+          <div class='tab table__content' data-number='1'>
             Menu
           </div>
         </div>
         <div class='menubar__sub' id='submenu'>
           <div class='sub__table'>
             <div class='table__content'>
-              <div id='acitivity'>
+              <div class='tab' data-number='2' id='activity'>
                 活動内容
               </div>
-              <div id='about'>
+              <div class='tab' data-number='3' id='about'>
                 Unitusとは
               </div>
-              <div id='blog'>
+              <div class='tab' data-number='4' id='blog'>
                 ブログ
               </div>
-              <div id='contact'>
+              <div class='tab' data-number='5' id='contact'>
                 コンタクト
               </div>
             </div>
@@ -37,19 +39,61 @@
           </div>
         </div>
       </div>
-      <div class='unitus__top-animate top-animate'>
-        <img class='top-animate__img' src='img/top1-1.jpg'>
-        <div class='top-animate__logo'>
-          <div class='logo__sub'>
-            想像を創造する。
-          </div>
-          <div class='logo__main'>
-            Unitus
+      <div class='panel active' id='tab1'>
+        <div class='unitus__top-animate top-animate'>
+          <img class='top-animate__img' src='img/top1-1.jpg'>
+          <div class='top-animate__logo'>
+            <div class='logo__sub'>
+              想像を創造する。
+            </div>
+            <div class='logo__main'>
+              Unitus
+            </div>
           </div>
         </div>
       </div>
+      <div class='unitus__blog blog' id='tab2'>
+        <div class='blog__top'>
+          <div class='top__smoke'></div>
+          <div class='top__content'>
+            <div class='content__table'>
+              <div class='table__title'>
+                ハッカソン大会に参加して
+              </div>
+            </div>
+          </div>
+          <div class='top__header'>
+            <div class='header__title'>ハッカソン大会に参加して</div>
+          </div>
+        </div>
+        <div class='blog__content'>
+          <div class='content__text'>
+            ハッカソンの大会に参加してきました！！
+            <br>
+            初めての経験だったけれど、いろいろな人が居る中でチームを組んで、何か一つを作り上げることはとても有意義に感じました。
+            <br>
+            <br>
+            ハッカソン（英語: hackathon、別名:hack day,hackathon、別名ckfest,codefest）とは
+            <br>
+            <br>
+            ソフトウェア開発分野のプログラマやグラフィックデザイナー、
+            ユーザインタフェース設計者、プロジェクトマネージャらが集中的に共同作業をするソフトウェア関連プロジェクトのイベントである。時にはハードウェアコンポーネントが扱われることもある。
+            <br>
+            <br>
+            ハッカソンは一般的に最低限1日から一週間の期間で開催される。いくつかのハッカソンは単に教育や社会的な目的を意図に開催されるが、
+            <br>
+            多くの場合使用に耐えるソフトウェアの開発や既存のソフトウェアを改善することを目標としている。
+            <br>
+            また、使用プログラミング言語、オペレーティングシステム、アプリケーション、API、主題や参加プログラマーの人数を定める傾向にある。
+          </div>
+        </div>
+      </div>
+      <div class='panel' id='tab3'></div>
+      <div class='panel' id='tab4'></div>
+      <div class='panel' id='tab5'></div>
     </div>
     <script>
+      var smoke = new scrollSmoke({$scrollWatch: $(".blog"), $positionWatch: $(".blog__top"), $header: $(".top__header"), $smoke: $(".top__smoke")})
       $("#menu").on("mouseover", function(e){e.stopPropagation(); $("#submenu").addClass("show");});
       $("#body").on("mouseover", function(){$("#submenu").removeClass("show");});
     </script>
