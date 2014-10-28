@@ -1,7 +1,7 @@
 .unitus__menubar
   width: 200px
   background-color: rgba(0,0,0,0.7)
-  z-index: 2
+  z-index: 4
   height: 100%
   position: absolute
   left: -200px
@@ -29,7 +29,7 @@
     left: 200px
     @include css3(transition, all 0.5s ease-in-out)
     &.show
-      width: 120px
+      width: 130px
     .sub__table
       box-sizing: border-box
       position: relative
@@ -45,3 +45,27 @@
         font-family: serif
         line-height: 1.7
         font-size: 15px
+        #activity
+          &:hover
+            cursor: pointer
+            color: $pink
+          &.active
+            color: $pink
+        #about
+          &:hover
+            cursor: pointer
+            color: $lightBlue
+          &.active
+            color: $lightBlue
+        #blog
+          &:hover
+            cursor: pointer
+            color: $lightGreen
+          &.active
+            color: $lightGreen
+        #contact
+          &:hover
+            cursor: pointer
+            color: $yellow
+          &.active
+            color: $yellow

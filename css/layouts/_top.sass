@@ -29,3 +29,54 @@
             @include css3(background-size, 300% 300%)
             @include css3(background-clip, text)
             @include animation(shimmer, 5s, 0, infinite, ease, alternate, none)
+  .panel
+    width: 100%
+    height: 100%
+    z-index: 3
+    position: absolute
+    display: none
+    overflow: scroll
+    &.active
+      display: block
+    &#tab2
+      background-image: url("../img/top2.jpg")
+      background-size: cover
+      background-position: center
+      .panel__wrap
+        padding-left: 330px
+        width: 100%
+        height: 100%
+        position: absolute
+        box-sizing: border-box
+        .wrap__content
+          padding: 30px
+          font-size: 20px
+          width: 90%
+          margin: 40px 0
+          height: 500px
+          box-sizing: border-box
+          .content__title
+            width: 30%
+            border: solid 1px
+            color: white
+            font-family: serif
+            text-align: center
+            padding: 50px
+            box-sizing: border-box
+            &.content__title--aim
+              background-color: $lightPurple
+            &.content__title--about
+              background-color: $lightGreen
+
+    &#tab3
+      background-image: url("../img/top3.jpg")
+      background-size: cover
+      background-position: center
+    &#tab4
+      background-image: url("../img/top4.jpg")
+      background-size: cover
+      background-position: center
+    &#tab5
+      background-image: url("../img/top5.jpg")
+      background-size: cover
+      background-position: center

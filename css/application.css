@@ -319,6 +319,67 @@ body, html {
   -o-animation: shimmer 5s ease 0 infinite alternate none;
   animation: shimmer 5s ease 0 infinite alternate none;
 }
+.unitus.unitus--top .panel {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: absolute;
+  display: none;
+  overflow: scroll;
+}
+.unitus.unitus--top .panel.active {
+  display: block;
+}
+.unitus.unitus--top .panel#tab2 {
+  background-image: url("../img/top2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.unitus.unitus--top .panel#tab2 .panel__wrap {
+  padding-left: 330px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+}
+.unitus.unitus--top .panel#tab2 .panel__wrap .wrap__content {
+  padding: 30px;
+  font-size: 20px;
+  width: 90%;
+  margin: 40px 0;
+  height: 500px;
+  box-sizing: border-box;
+}
+.unitus.unitus--top .panel#tab2 .panel__wrap .wrap__content .content__title {
+  width: 30%;
+  border: solid 1px;
+  color: white;
+  font-family: serif;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.unitus.unitus--top .panel#tab2 .panel__wrap .wrap__content .content__title.content__title--aim {
+  background-color: #912f77;
+}
+.unitus.unitus--top .panel#tab2 .panel__wrap .wrap__content .content__title.content__title--about {
+  background-color: #80ba31;
+}
+.unitus.unitus--top .panel#tab3 {
+  background-image: url("../img/top3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.unitus.unitus--top .panel#tab4 {
+  background-image: url("../img/top4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.unitus.unitus--top .panel#tab5 {
+  background-image: url("../img/top5.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .unitus__blog {
   box-sizing: border-box;
@@ -443,7 +504,7 @@ body, html {
 .unitus__menubar {
   width: 200px;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 4;
   height: 100%;
   position: absolute;
   left: -200px;
@@ -482,7 +543,7 @@ body, html {
   transition: all 0.5s ease-in-out;
 }
 .menubar .menubar__sub.show {
-  width: 120px;
+  width: 130px;
 }
 .menubar .menubar__sub .sub__table {
   box-sizing: border-box;
@@ -500,6 +561,34 @@ body, html {
   font-family: serif;
   line-height: 1.7;
   font-size: 15px;
+}
+.menubar .menubar__sub .sub__table .table__content #activity:hover {
+  cursor: pointer;
+  color: #d73b74;
+}
+.menubar .menubar__sub .sub__table .table__content #activity.active {
+  color: #d73b74;
+}
+.menubar .menubar__sub .sub__table .table__content #about:hover {
+  cursor: pointer;
+  color: #45a4af;
+}
+.menubar .menubar__sub .sub__table .table__content #about.active {
+  color: #45a4af;
+}
+.menubar .menubar__sub .sub__table .table__content #blog:hover {
+  cursor: pointer;
+  color: #80ba31;
+}
+.menubar .menubar__sub .sub__table .table__content #blog.active {
+  color: #80ba31;
+}
+.menubar .menubar__sub .sub__table .table__content #contact:hover {
+  cursor: pointer;
+  color: #f3bc3a;
+}
+.menubar .menubar__sub .sub__table .table__content #contact.active {
+  color: #f3bc3a;
 }
 
 .unitus__top-animate.top-animate {
